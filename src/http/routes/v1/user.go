@@ -1,7 +1,7 @@
 package v1routes
 
 import (
-	userv1controller "github.com/BennoAlif/ps-cats-social/src/http/controllers/user"
+	userv1controller "github.com/BennoAlif/go-backend-starter/src/http/controllers/user"
 )
 
 func (i *V1Routes) MountUser() {

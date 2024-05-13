@@ -1,21 +1,27 @@
 package main
 
 import (
-	"log"
+	"fmt"
 
-	"github.com/BennoAlif/ps-cats-social/src/drivers/db"
-	"github.com/BennoAlif/ps-cats-social/src/http"
+	"github.com/BennoAlif/go-backend-starter/src/drivers/db"
+	"github.com/BennoAlif/go-backend-starter/src/http"
 	"github.com/joho/godotenv"
 )
 
 func main() {
-	err := godotenv.Load()
+	godotenv.Load()
 
+	dbConnection, err := db.CreateConnection()
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		fmt.Println("Error creating database connection:", err)
+		return
 	}
 
-	dbConnection := db.CreateConnection()
+	defer func() {
+		if err := dbConnection.Close(); err != nil {
+			fmt.Println("Error closing database connection:", err)
+		}
+	}()
 
 	h := http.New(&http.Http{
 		DB: dbConnection,

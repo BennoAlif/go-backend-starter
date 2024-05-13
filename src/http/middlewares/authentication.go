@@ -8,7 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/BennoAlif/ps-cats-social/src/helpers"
+	"github.com/BennoAlif/go-backend-starter/src/helpers"
 )
 
 type ErrorResponse struct {

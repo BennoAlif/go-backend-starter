@@ -3,7 +3,7 @@ package userusecase
 import (
 	"os"
 
-	"github.com/BennoAlif/ps-cats-social/src/helpers"
+	"github.com/BennoAlif/go-backend-starter/src/helpers"
 )
 
 type (

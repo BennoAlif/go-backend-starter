@@ -1,7 +1,7 @@
 package userusecase
 
 import (
-	user "github.com/BennoAlif/ps-cats-social/src/repositories/user"
+	user "github.com/BennoAlif/go-backend-starter/src/repositories/user"
 )
 
 type sUserUsecase struct {

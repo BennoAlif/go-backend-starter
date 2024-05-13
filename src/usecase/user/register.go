@@ -3,9 +3,9 @@ package userusecase
 import (
 	"os"
 
-	"github.com/BennoAlif/ps-cats-social/src/helpers"
+	"github.com/BennoAlif/go-backend-starter/src/helpers"
 
-	userrepository "github.com/BennoAlif/ps-cats-social/src/repositories/user"
+	userrepository "github.com/BennoAlif/go-backend-starter/src/repositories/user"
 )
 
 type (

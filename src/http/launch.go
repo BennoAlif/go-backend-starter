@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/BennoAlif/ps-cats-social/src/helpers"
-	v1routes "github.com/BennoAlif/ps-cats-social/src/http/routes/v1"
+	"github.com/BennoAlif/go-backend-starter/src/helpers"
+	v1routes "github.com/BennoAlif/go-backend-starter/src/http/routes/v1"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"gopkg.in/go-playground/validator.v9"
@@ -17,6 +17,7 @@ func (i *Http) Launch() {
 	e.Validator = &helpers.CustomValidator{Validator: validator.New()}
 	e.HTTPErrorHandler = helpers.ErrorHandler
 	e.Pre(middleware.RemoveTrailingSlash())
+	e.Use(middleware.Logger())
 	e.Use(middleware.Secure())
 	e.Use(middleware.Recover())
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{

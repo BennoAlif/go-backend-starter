@@ -3,10 +3,10 @@ package userv1controller
 import (
 	"net/http"
 
-	userUsecase "github.com/BennoAlif/ps-cats-social/src/usecase/user"
+	userUsecase "github.com/BennoAlif/go-backend-starter/src/usecase/user"
 	"github.com/labstack/echo/v4"
 
-	userRepository "github.com/BennoAlif/ps-cats-social/src/repositories/user"
+	userRepository "github.com/BennoAlif/go-backend-starter/src/repositories/user"
 )
 
 func (i *V1User) Register(c echo.Context) (err error) {

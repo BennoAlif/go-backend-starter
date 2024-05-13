@@ -1,8 +1,8 @@
 package v1routes
 
 import (
-	v1controller "github.com/BennoAlif/ps-cats-social/src/http/controllers/ping"
-	"github.com/BennoAlif/ps-cats-social/src/http/middlewares"
+	v1controller "github.com/BennoAlif/go-backend-starter/src/http/controllers/ping"
+	"github.com/BennoAlif/go-backend-starter/src/http/middlewares"
 )
 
 func (i *V1Routes) MountPing() {

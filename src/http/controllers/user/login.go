@@ -3,9 +3,9 @@ package userv1controller
 import (
 	"net/http"
 
-	userUsecase "github.com/BennoAlif/ps-cats-social/src/usecase/user"
+	userUsecase "github.com/BennoAlif/go-backend-starter/src/usecase/user"
 
-	userRepository "github.com/BennoAlif/ps-cats-social/src/repositories/user"
+	userRepository "github.com/BennoAlif/go-backend-starter/src/repositories/user"
 	"github.com/labstack/echo/v4"
 )
 

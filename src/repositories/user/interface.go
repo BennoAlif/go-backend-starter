@@ -3,7 +3,7 @@ package userrepository
 import (
 	"database/sql"
 
-	"github.com/BennoAlif/ps-cats-social/src/entities"
+	"github.com/BennoAlif/go-backend-starter/src/entities"
 )
 
 type sUserRepository struct {

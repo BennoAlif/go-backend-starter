@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/BennoAlif/ps-cats-social/src/entities"
+	"github.com/BennoAlif/go-backend-starter/src/entities"
 )
 
 type User struct {
@@ -21,7 +21,7 @@ func (i *sUserRepository) FindByEmail(email *string) (*entities.User, error) {
 	err := row.Scan(&user.ID, &user.Name, &user.Email, &user.Password)
 	if err != nil {
 		if err == sql.ErrNoRows {
-			log.Printf("No user found with email: %s", email)
+			log.Printf("No user found with email: %s", *email)
 			return nil, nil // Return nil for both user and error
 		}
 		log.Printf("Error scanning user by email: %s", err)
